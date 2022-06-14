@@ -1,0 +1,22 @@
+<% for(var i = 1; i < student.length; i++) { %>
+
+<tr>
+  <td><%= student[i].uid %></td>
+  <td><%= student[i].name %></td>
+  <td><%= student[i].email %></td>
+  <td><%= student[i].branch %></td>
+  <td><%= student[i].section %></td>
+  <td><%= student[i].oops %></td>
+  <td><%= student[i].dsa %></td>
+  <td><%= student[i].maths %></td>
+  <td><%= student[i].softskills %></td>
+  <td>
+    <a
+      href="/update_user?id=<%= student[i]._id%>"
+      class="btn border-shadow update"
+    >
+      <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+    </a>
+  </td>
+</tr>
+<% } %>

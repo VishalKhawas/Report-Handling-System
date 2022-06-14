@@ -1,0 +1,52 @@
+<!-- form handling -->
+<form action="/api/students" method="POST" id="add_user">
+  <div class="new_user">
+    <div class="form-group">
+      <label for="name" class="text-light">Name of the Student</label>
+      <input type="text" name="name" value="" placeholder="" />
+    </div>
+    <div class="form-group">
+      <label for="email" class="text-light">Email Address</label>
+      <input type="text" name="email" value="" placeholder="" />
+    </div>
+    <!-- <div class="form-group">
+      <label for="name" class="text-light">Name of the student</label>
+      <input type="hidden" name="id" value="" />
+      <input type="text" name="name" value="" placeholder="" />
+    </div> -->
+    <!-- <div class="form-group">
+      <label for="Email" class="text-light">Email Address</label>
+      <input
+        type="email"
+        name="email"
+        value=""
+        placeholder="example@gmail.com"
+        </div>
+      /> -->
+
+    <div class="form-group">
+      <label for="uid" class="text-light">Assign UID to the Student</label>
+      <input type="text" name="uid" value="" placeholder="" />
+    </div>
+    <div class="form-group">
+      <label for="branch" class="text-light">Branch</label>
+      <input type="text" name="branch" value="" placeholder="" />
+    </div>
+    <div class="form-group">
+      <label for="section" class="text-light"
+        >Assign Section to the Student</label
+      >
+      <input type="text" name="section" value="" placeholder="" />
+    </div>
+    <div class="form-group">
+      <label for="password" class="text-light"
+        >Login Password for the Student</label
+      >
+      <input type="text" name="password" value="" placeholder="" />
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn text-dark update">Save</button>
+    </div>
+  </div>
+</form>

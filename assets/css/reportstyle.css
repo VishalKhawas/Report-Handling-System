@@ -1,0 +1,26 @@
+
+table {
+  border-spacing: 1px;
+  empty-cells: hide;
+}
+.tab{
+  align-content: center;
+}
+tr:nth-child(1) {
+    background-color: #130000;
+    color:white;
+  }
+tr:nth-child(2) {
+    background-color: #000000;
+    color:white;
+  }
+tr:nth-child(2n+3){
+  background-color: silver;
+}
+
+th {
+  align-content: center;
+  border: 1px solid rgba(104, 90, 90, 0.975);
+  padding: 10px;
+  background: none;
+}

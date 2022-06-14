@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    /> -->
+  </head>
+
+  <body>
+    <section class="Sub-header">
+      <nav>
+        <a href="/" class="logo">ORHS</a>
+        <div class="nav-links" id="navLinks">
+          <!-- reposnive bar open and close -->
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <!-- <li><a href="/">Home</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="blog.html">Blog</a></li> -->
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <!-- reposnive bar open and close -->
+      </nav>
+      <h1>Student Analysis</h1>
+      <button>
+        <a href="/login" style="text-decoration: none; font-size: 1.2rem"
+          >LOGOUT</a
+        >
+      </button>
+    </section>
+
+    <section>
+      <link rel="stylesheet" href="css/profilestyle.css" />
+      <div class="side_wrapper">
+        <section class="about-dev">
+          <header class="profile-card_header">
+            <div class="profile-card_header-container">
+              <!-- <div class="profile-card_header-imgbox">
+                <img src="http://placekitten.com/600/900" alt="Mewy Pawpins" />
+              </div> -->
+              <h1><%=studuid.name %></h1>
+            </div>
+          </header>
+          <div class="profile-card_about">
+            <br />
+            <style>
+              table,
+              th,
+              td {
+                text-align: center;
+                border: 1px solid white;
+                border-collapse: collapse;
+              }
+              th,
+              td {
+                background-color: #96d4d4;
+              }
+            </style>
+            <table style="width: 100%">
+              <tr>
+                <td>Name</td>
+                <td><%= studuid.name %></td>
+              </tr>
+              <tr>
+                <td>UID</td>
+                <td><%= studuid.uid %></td>
+              </tr>
+              <tr>
+                <td>Branch</td>
+                <td><%= studuid.branch %></td>
+              </tr>
+              <tr>
+                <td>Section</td>
+                <td><%= studuid.section %></td>
+              </tr>
+            </table>
+            <br /><br />
+            <center><h3>Student Report Card</h3></center>
+            <br />
+            <style>
+              table {
+                border-spacing: 1px;
+                empty-cells: hide;
+              }
+
+              tr:nth-child(1) {
+                background-color: #000000c0;
+                color: white;
+              }
+              tr:nth-child(2) {
+                background-color: #000000c0;
+                color: white;
+              }
+              tr:nth-child(2n + 3) {
+                background-color: silver;
+              }
+
+              th {
+                border: 1px solid black;
+                padding: 10px;
+                background: none;
+              }
+            </style>
+            <center>
+              <table>
+                <tr>
+                  <th colspan="2">Course</th>
+                  <th rowspan="2">Marks</th>
+                  <!-- <th colspan="2">Grade</th> -->
+                </tr>
+
+                <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <!-- <th>Letter</th>
+                  <th>Points</th> -->
+                </tr>
+
+                <tr>
+                  <th>OOPS</th>
+                  <th>Object Oriented Programming Skills</th>
+                  <th><%= studuid.oops %></th>
+                  <!-- <th>A</th>
+                  <th>12.0</th> -->
+                </tr>
+
+                <tr>
+                  <th>DSA</th>
+                  <th>Data Structures And Algorithms</th>
+                  <th><%= studuid.dsa %></th>
+                  <!-- <th>A-</th>
+                  <th>10.98</th> -->
+                </tr>
+
+                <tr>
+                  <th>MATHS</th>
+                  <th>Mathematics</th>
+                  <th><%= studuid.maths %></th>
+                  <!-- <th>A</th>
+                  <th>12</th> -->
+                </tr>
+
+                <tr>
+                  <th>SSKILLS</th>
+                  <th>Soft Skills</th>
+                  <th><%= studuid.softskills %></th>
+                  <!-- <th>B+</th>
+                  <th>9.99</th> -->
+                </tr>
+
+                <!-- <tr>
+                  <th>Math 225</th>
+                  <th>Multi-Variable Calculus</th>
+                  <th>3.0</th>
+                   <th>A-</th>
+                  <th>10.98</th>
+                </tr> -->
+
+                <tr>
+                  <th></th>
+                  <th>Total</th>
+                  <th>
+                    <%= studuid.oops + studuid.dsa + studuid.maths +
+                    studuid.softskills %>
+                  </th>
+                  <!-- <th>15.0</th>
+                  <th colspan="2">55.95</th> -->
+                </tr>
+
+                <tr>
+                  <th></th>
+                  <th>Percentage</th>
+                  <th>
+                    <%= (studuid.oops + studuid.dsa + studuid.maths +
+                    studuid.softskills)/4 %> %
+                  </th>
+                  <!-- <th colspan="3">3.73/4.0</th> -->
+                </tr>
+              </table>
+            </center>
+
+            <footer class="profile-card_footer">
+              <div class="social-row fa-2x">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                <i class="fa-brands fa-hackerrank" aria-hidden="true"></i>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer start -->
+    <section class="footer">
+      <hr />
+      <h4>About Us</h4>
+      <p>
+        Chandigarh University is a full-fledged university established by the
+        Punjab State Legislature and is recognized by University Grants
+        Commission under Section 2(f) with the right to confer degrees as per
+        Section 22(1) of the UGC Act, 1956.
+      </p>
+
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <p>&copy Nitish Bisht and Team</p>
+    </section>
+    <!-- Footer end -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
